@@ -47,6 +47,7 @@ body{
   width: 100px;
   height: 100px;
   cursor: pointer;
+  transition-duration: 0.5s;
 }
 
 
@@ -101,17 +102,15 @@ label #sidebar_btn:hover{
   width: 100%;
 }
 
-.content{
-  margin-left: 350px;
-  background-position: center;
-  background-size: cover;
-  transition: 0.5s;
-  font-family: 'Alegreya Sans SC', sans-serif;
-  font-style: normal;
-  margin-top: 35px;
-  /* this is used to fil extra space in bottom */
-  padding-bottom: 50px;
+#check:checked ~ .sidebar .profile_info .profile_image{
+  width: 50px;
+  height: 50px;
+  margin-left: 80px;
+  margin-top: 45px;
+  margin-bottom: 50px;
+  transition-duration: 0.5s;
 }
+
 
 
 /* this is the text in middle page */
@@ -155,54 +154,86 @@ label #sidebar_btn:hover{
   
 }
 
-span.htmltag,.bodytag1{
+span.htmltag.htmltag1{
   font-family: 'La Belle Aurore', cursive;
   color: #3498db;
   opacity: 0.5;
   font-size: 18px;
   line-height: 10px;
-  
-  
+  padding-left: 150px;
+  opacity: 0.5;
+  transition-duration: 0.5s;
 }
-.contactpara{
+
+span.htmltag.bodytag1{
+  font-family: 'La Belle Aurore', cursive;
+  color: #3498db;
+  opacity: 0.5;
+  font-size: 18px;
+  line-height: 10px;
+  padding-left: 175px;
+  opacity: 0.5;
+  transition-duration: 0.5s;
+}
+.htmlbody1{
+  margin-top: 15px;
+}  
+.htmlbody2{
+  margin-bottom: 15px;
+}
+
+.content{
+  padding-left: 300px;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-style: normal;
+  margin-top: 20px;
+  /* this is used to fil extra space in btn */
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+
+.contentpara{
   color:rgba(37, 164, 196, 0.911);
   font-size: 18px;
   line-height: 18px;
   font-family: 'Alegreya Sans SC', sans-serif;
   opacity: 0.8;
-  padding-right: 200px;
-}
-.tag1{
-  padding-left: 170px;
-  opacity: 0.5;
-  line-height: 25px;
-}
-.bodytag1{
-  margin-left: 220px;
-  opacity: 0.5;
-  
-}
-span.tag3{
-  margin-left: -25px;
-  opacity: 0.5;
-  line-height: 0px;
-  /* h1 tag 1 */
+  padding-right: 20%;
 }
 
+
+span.tag3,
 span.tag4{
-  margin-left: -25px;
   opacity: 0.5;
   line-height: 0px;
-  /* h1 tag 2 */
+  font-family: 'La Belle Aurore', cursive;
+  color:#3498db;
+  font-size: 18px;
+  /* h1 tag 1 and h2 tag 2 */
 }
-#check:checked ~ .tag1{
-  padding-left: 85px;
-}
-#check:checked ~ .bodytag1{
-  margin-left: 150px;
-  
 
+
+#check:checked ~ .htmltag.htmltag1{
+  padding-left: 80px;
+  transition-delay: 0.14s;
+  transition-duration: 0.65s;
 }
+
+#check:checked ~ div.htmlbody1 span.htmltag.bodytag1,
+#check:checked ~ div.htmlbody2 span.htmltag.bodytag1{
+  padding-left: 140px;
+  transition-delay: 0.16s;  
+  transition-duration: 0.7s;
+}
+#check:checked ~ div div.content{
+  padding-left: 240px;
+  transition-delay: 0.18s;
+  transition-duration: 0.7s;
+}
+
 /* "contact me button is starts in here" */
 .btn{
   border: 1px solid #3498db;
@@ -211,10 +242,10 @@ span.tag4{
   font-size: 20px;
   font-family: 'Alegreya Sans SC', sans-serif;
   cursor: pointer;
-  margin-top: 20px;
   transition: 0.8s;
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 .btn1,.btn2{
   color: #3498db;
@@ -261,13 +292,7 @@ span.tag4{
 
 
 
-#check:checked ~ .sidebar .profile_info .profile_image{
-  width: 50px;
-  height: 50px;
-  margin-left: 80px;
-  margin-top: 45px;
-  margin-bottom: 50px;
-}
+
 
 #check{
   display:none;
@@ -294,14 +319,14 @@ background color and spacing between them
 
   .content{
     margin-top: 65px;
-    margin-left: 20%;
+    padding-left: 15%;
   }
 
   #check:checked ~ .content{
-    margin-left: 0;
+    margin-left: 0px;
     
   }
-  .contactpara{
+  .contentpara{
     line-height: 20px;
     padding-right: 50px;
   }
@@ -319,21 +344,21 @@ background color and spacing between them
     align-items: center;
     padding: 10px 20px;
     
-    
   }
 
   .nav_bar .mobile_profile_image{
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    margin-left: 5%;
   }
-
+  
   .nav_bar .nav_btn{
     color: #fff;
     font-size: 22px;
     cursor: pointer;
     transition: 0.5s;
     transition-property: all;
+    margin-right: 3%;
   }
 
   .nav_bar .nav_btn:hover{
@@ -365,19 +390,18 @@ background color and spacing between them
   .mobile_nav_items i{
     padding-right: 20px;
   }
-  .tag1{
-    padding-left: 20px;
-    opacity: 0.5;
-    line-height: 25px;
+  span.htmltag.htmltag1,
+  span.htmltag.htmltag2{
+    padding-left: 2%;
   }
-  .bodytag1{
-    margin-left: 70px;
-    opacity: 0.5;
-  }
+  /* html tag 1 and 2 */  
 
+  div.htmlbody1 span.htmltag.bodytag1,
+  div.htmlbody2 span.htmltag.bodytag1 {
+    padding-left: 5%;
+  }
   .active{
     display: block;
-    transition: 0.5s;
 
   }
 }
