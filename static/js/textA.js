@@ -1,6 +1,6 @@
 const texte1 = document.querySelector('.rubber-band');
 const texte2 = texte1.textContent;
-const texte3 = texte2.replace(/\s/g, "%")
+const texte3 = texte2.replace(/%/g, "%")
 const letters = texte3.split('');
 
 let html = "";
