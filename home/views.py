@@ -11,5 +11,5 @@ def about(request):
 def contact(request):
     return render(request, 'pages/contact.html')
 
-def skill(request):
-    return render(request, 'pages/skills.html')
+def projects(request):
+    return render(request, 'pages/projects.html')

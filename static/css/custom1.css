@@ -203,6 +203,10 @@ span.htmltag.bodytag1{
   opacity: 0.8;
   padding-right: 20%;
 }
+.contentpara img{
+  width: 100%;
+  height: auto;
+}
 
 
 span.tag3,
@@ -233,6 +237,10 @@ span.tag4{
   transition-delay: 0.18s;
   transition-duration: 0.7s;
 }
+
+
+
+
 
 /* "contact me button is starts in here" */
 .btn{
