@@ -2,34 +2,44 @@
 {% load static %}
 
 {% block Content %}
-<span class="htmltag tag3">
-      < h1>
-</span>
+
+<span class="htmltag tag">< h1></span>
 <h1 class='rubber-band'>Projects</h1>
-<span class="htmltag tag4">
-      < /h1>
-</span>
+<span class="htmltag tag">< /h1></span>
+
+
 <div class="contentpara">
-      <span class="htmltag tag3">
-            < img>
-      </span>
-      <a href="https://currencyconvertor.pythonanywhere.com/">
-            <img src="{%static 'images/currency_converter.png'%}" alt="">
-      </a>
-      <span class="htmltag tag3">
-            < /img>
-      </span>
-      <p>
-            This project showcases my first experience using an API to develop a practical application. I successfully
-            created an online currency converter by integrating the exchangerate.host free API. The converter fetches
-            data in JSON format from the API, allowing me to access the latest exchange rates. Utilizing this data, I
-            implemented background calculations to perform accurate conversions for any given amount. The result is a
-            fully functional and efficient online currency converter. This project highlights my ability to work with
-            APIs and demonstrates my proficiency in handling data formats and performing calculations to deliver
-            valuable solutions.
-      </p>
-      <p>
-      </p>
+
+      <div class="projectname"><span class="htmltag tag">< h2></span>
+            <h2 class='rubber-band'>Currency Converter</h2>
+            <span class="htmltag tag">< /h2></span></div>
+
+
+
+      <div class="projectcontent">
+            <span class="tag">
+                  < img>
+            </span>
+            <a href="https://currencyconvertor.pythonanywhere.com/">
+                  <img src="{%static 'images/currency_converter.png'%}" alt="">
+            </a>
+            <span class="tag">
+                  < /img>
+            </span>
+            <p>
+                  This project showcases my first experience using an API to develop a practical application. I successfully
+                  created an online currency converter by integrating the exchangerate.host free API. The converter fetches
+                  data in JSON format from the API, allowing me to access the latest exchange rates. Utilizing this data, I
+                  implemented background calculations to perform accurate conversions for any given amount. The result is a
+                  fully functional and efficient online currency converter. This project highlights my ability to work with
+                  APIs and demonstrates my proficiency in handling data formats and performing calculations to deliver
+                  valuable solutions.
+            </p>
+            
+      <a href="/contact"><button class="btn btn1">Follow Me On Social Media</button></a>
+      </div>
+      
 
 </div>
+
 {% endblock %}

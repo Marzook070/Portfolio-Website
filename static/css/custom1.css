@@ -163,6 +163,7 @@ span.htmltag.htmltag1{
   padding-left: 150px;
   opacity: 0.5;
   transition-duration: 0.5s;
+  user-select: none;
 }
 
 span.htmltag.bodytag1{
@@ -174,6 +175,7 @@ span.htmltag.bodytag1{
   padding-left: 175px;
   opacity: 0.5;
   transition-duration: 0.5s;
+  user-select: none;
 }
 .htmlbody1{
   margin-top: 15px;
@@ -183,7 +185,7 @@ span.htmltag.bodytag1{
 }
 
 .content{
-  padding-left: 300px;
+  padding-left: 270px;
   background-position: center;
   background-size: cover;
   font-family: 'Alegreya Sans SC', sans-serif;
@@ -195,27 +197,42 @@ span.htmltag.bodytag1{
 }
 
 
+.content h1{
+  margin: 10px 0px 10px 15px;
+}
+.content h2{
+  margin: 10px 0px 10px 30px;
+}
+
+
+
 .contentpara{
   color:rgba(37, 164, 196, 0.911);
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 23px;
+  line-height: 21px;
   font-family: 'Alegreya Sans SC', sans-serif;
-  opacity: 0.8;
-  padding-right: 20%;
+  padding-right: 16%;
+  margin: 20px 0px;
 }
+
 .contentpara img{
   width: 100%;
   height: auto;
+  margin: 10px 0px;
 }
 
+.projectcontent{
+  margin-left: 30px;
+  margin-top: 5px;
+}
 
-span.tag3,
-span.tag4{
+span.tag{
   opacity: 0.5;
   line-height: 0px;
   font-family: 'La Belle Aurore', cursive;
   color:#3498db;
   font-size: 18px;
+  user-select: none;
   /* h1 tag 1 and h2 tag 2 */
 }
 

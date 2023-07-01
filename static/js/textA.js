@@ -1,14 +1,17 @@
-const texte1 = document.querySelector('.rubber-band');
-const texte2 = texte1.textContent;
-const texte3 = texte2.replace(/%/g, "%")
-const letters = texte3.split('');
+const rubberBands = document.querySelectorAll('.rubber-band');
 
-let html = "";
+rubberBands.forEach(rubberBand => {
+  const texte2 = rubberBand.textContent;
+  const texte3 = texte2.replace(/%/g, "%");
+  const letters = texte3.split('');
 
-const makespan = letter => `<span class="rubber-letter">${letter}</span>`;
+  let html = "";
 
-letters.forEach(letter => (html += makespan(letter)))
+  const makespan = letter => `<span class="rubber-letter">${letter}</span>`;
 
-const term = html.replace(/%/g, '<br>');
+  letters.forEach(letter => (html += makespan(letter)));
 
-texte1.innerHTML = term;
+  const term = html.replace(/%/g, '<br>');
+
+  rubberBand.innerHTML = term;
+});
