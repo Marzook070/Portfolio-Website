@@ -208,11 +208,12 @@ span.htmltag.bodytag1{
 
 .contentpara{
   color:rgba(37, 164, 196, 0.911);
-  font-size: 23px;
+  font-size: 23 px;
   line-height: 21px;
   font-family: 'Alegreya Sans SC', sans-serif;
   padding-right: 16%;
   margin: 20px 0px;
+  transition: 0.5s;
 }
 
 .contentpara img{
