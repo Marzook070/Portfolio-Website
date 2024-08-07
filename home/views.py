@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Projects
 
 # Create your views here.
 def index(request):
@@ -12,4 +13,6 @@ def contact(request):
     return render(request, 'pages/contact.html')
 
 def projects(request):
-    return render(request, 'pages/projects.html')
+    projects_data = Projects.objects.all()
+        
+    return render(request, 'pages/projects.html', {'projects': projects_data})
