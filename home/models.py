@@ -9,6 +9,4 @@ class Projects(models.Model):
     website_link = models.URLField(default='https://www.google.com')
 
     def __str__(self):  
-        return self.project_name    
-
-
+        return self.project_name   
