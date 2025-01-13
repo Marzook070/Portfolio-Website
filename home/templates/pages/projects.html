@@ -21,7 +21,11 @@
                         < img>
                   </span>
                   <a href="{{project.website_link}}">
-                        <img src="{{project.photo.url}}" alt="">
+                        {% if project.photo %}
+                              <img src="{{ project.photo.url }}" alt="{{ project.project_name }}">
+                        {% else %}
+                              <img src="{% static 'images/default.jpg' %}" alt="Default Image">
+                        {% endif %}
                   </a>
                   <span class="tag">
                         < /img>     
