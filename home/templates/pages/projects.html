@@ -9,33 +9,36 @@
 
 
 <div class="contentpara">
+      {% if projects %}
+            {% for project in projects %}
+                  <div class="projectname"><span class="htmltag tag">< h2></span>
+                  <h2 class='rubber-band'>{{project.project_name}}</h2>
+                  <span class="htmltag tag">< /h2></span></div>
 
-      {% for project in projects %}
-            <div class="projectname"><span class="htmltag tag">< h2></span>
-            <h2 class='rubber-band'>{{project.project_name}}</h2>
-            <span class="htmltag tag">< /h2></span></div>
 
-
-            <div class="projectcontent">
-                  <span class="tag">
-                        < img>
-                  </span>
-                  <a href="{{project.website_link}}">
-                        {% if project.photo %}
-                              <img src="{{ project.photo.url }}" alt="{{ project.project_name }}">
-                        {% else %}
-                              <img src="{% static 'images/default.jpg' %}" alt="Default Image">
-                        {% endif %}
-                  </a>
-                  <span class="tag">
-                        < /img>     
-                  </span>
-                  <p>
-                        {{project.description | safe}}
-                  </p>
-                  
-            </div>
-      {% endfor %}
+                  <div class="projectcontent">
+                        <span class="tag">
+                              < img>
+                        </span>
+                        <a href="{{project.website_link}}">
+                              {% if project.photo %}
+                                    <img src="{{ project.photo.url }}" alt="{{ project.project_name }}">
+                              {% else %}
+                                    <img src="{% static 'images/default.jpg' %}" alt="Default Image">
+                              {% endif %}
+                        </a>
+                        <span class="tag">
+                              < /img>     
+                        </span>
+                        <p>
+                              {{project.description | safe}}
+                        </p>
+                        
+                  </div>
+            {% endfor %}
+      {% else %}
+            <p>No projects available at the moment.</p>
+      {% endif %}
       <a href="/contact"><button class="btn btn1">Follow Me On Social Media</button></a>
       
 
